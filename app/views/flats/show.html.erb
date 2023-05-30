@@ -1,17 +1,21 @@
 <h1>Votre maison d'horreur</h1>
 <p>Find me in app/views/flats/show.html.erb</p>
 
-<div>
   <div>
-    <h2> <%= @flat.name %> </h2>
-    <p> <%= @flat.address %> </p>
-    <p> <%= @flat.description %> </p>
+    <div>
+      <%= @flat.image_url %>
+    </div>
+    <div>
+      <h2> <%= @flat.name %> </h2>
+      <p> <%= @flat.image_url %> </p>
+      <p> <%= @flat.address %> </p>
+      <p> <%= @flat.description %> </p>
+    </div>
+    <div>
+      <p> <%= @flat.max_people %> </p>
+      <p> <%= @flat.price %> </p>
+    </div>
   </div>
-  <div>
-    <p> <%= @flat.max_people %> </p>
-    <p> <%= @flat.price %> </p>
-  </div>
-</div>
 
 <div>
   <%= render 'form', flat: @flat %>
