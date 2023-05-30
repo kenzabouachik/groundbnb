@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_144836) do
   create_table "flats", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.text "decription"
+    t.text "description"
     t.float "price"
     t.integer "max_people"
     t.bigint "user_id", null: false
