@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'flats/index'
+  get 'flats/show'
+  get 'flats/new'
+  get 'flats/create'
+  get 'flats/edit'
+  get 'flats/update'
+  get 'flats/destroy'
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
