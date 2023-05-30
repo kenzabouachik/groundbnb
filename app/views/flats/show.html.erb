@@ -1,22 +1,20 @@
 <div class="container">
 
   <h1>Votre maison d'horreur</h1>
-  <p>Find me in app/views/flats/show.html.erb</p>
 
-    <div>
-      <div>
-        <img src=" <%= @flat.image_url %> " alt="">
-      </div>
+  <div class="card-trip">
+    <img src=" <%= @flat.image_url %> " />
+    <div class="card-trip-infos">
       <div>
         <h2> <%= @flat.name %> </h2>
-        <p> <%= @flat.address %> </p>
+        <p>Address: <%= @flat.address %> </p>
         <p> <%= @flat.description %> </p>
+        <p> <%= @flat.max_people %> max people </p>
       </div>
-      <div>
-        <p> <%= @flat.max_people %> </p>
-        <p> <%= @flat.price %> </p>
-      </div>
+      <h2 class="card-trip-pricing"> <%= @flat.price %> € </h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
+  </div>
 
   <div>
     <%= render 'form', flat: @flat, booking: @booking %>
