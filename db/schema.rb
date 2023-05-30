@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_144836) do
 
   create_table "flats", force: :cascade do |t|
     t.string "name"
+    t.string "image_url"
     t.string "address"
     t.text "description"
     t.float "price"
