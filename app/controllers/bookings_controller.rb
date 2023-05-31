@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def show
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -15,7 +16,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to flats_path
     else
-      render :show, status: :unprocessable_entity
+      redirect_to flat_path(@flat), status: :unprocessable_entity, alert: 'An error occured'
     end
   end
 
