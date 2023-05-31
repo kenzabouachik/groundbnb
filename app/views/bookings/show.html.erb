@@ -1,1 +1,30 @@
 
+<div id="maDiv" class="fade-in fireworks">
+<%= javascript_include_tag 'ghost' %>
+  <h1 class="title-resa">Votre réservation</h1>
+
+
+    <div class="card-trip-booking" >
+      <img src=" <%= @booking.flat.image_url %> " />
+      <div class="card-trip-infos-booking">
+      <div class="ghost">
+      </div>
+        <div>
+          <h2> <%= @booking.flat.name %> </h2>
+          <p>Address: <%= @booking.flat.address %> </p>
+          <p>--------------- </p>
+          <p> <%= @booking.flat.description %> </p>
+          <p>--------------- </p>
+          <p> Date d'arrivée : <%= @booking.start_date %> </p>
+          <p> </p>
+          <p> Date de départ : <%= @booking.end_date %> </p>
+          <p>--------------- </p>
+          <p> Statut : <%= @booking.status %> </p>
+        </div>
+        <h2 class="card-trip-pricing-booking"> <%= @booking.flat.price %> </h2>
+        <img src="https://static.cnews.fr/sites/default/files/styles/image_750_422/public/2nfuf6u63rclboxnb3wss5mvw4_62d969f27ee0e_0.jpg?itok=TykdQPKY" class="card-trip-user-booking avatar-bordered" />
+      </div>
+    </div>
+</div>
+
+

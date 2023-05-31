@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # get "dashboard", to: "pages#dashboard"
   resources :flats do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show]
   end
   resources :bookings, only: [:destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
