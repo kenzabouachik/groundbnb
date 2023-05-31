@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.flat = @flat
     @booking.user = current_user
     if @booking.save
-      redirect_to flats_path
+      redirect_to dashboards_path
     else
       redirect_to flat_path(@flat), status: :unprocessable_entity, alert: 'An error occured'
     end
