@@ -1,0 +1,24 @@
+.btn-ghost {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: #040404;
+  transition: background 0.9 s ease;
+  box-shadow: none;
+}
+
+.btn-ghost a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Teko', sans-serif;
+  font-size: 18px;
+}
+
+.btn-ghost:hover {
+  background: #090909;
+  box-shadow: 0 0 8px red;
+}
+
+.btn-ghost:hover a {
+  color: red;
+}
