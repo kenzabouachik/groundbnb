@@ -1,24 +1,26 @@
 .card-trip {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  color: black;
+  background-color: black;
+  box-shadow: 0 0 30px rgba(196, 12, 12, 0.69);
+  border-radius: 10px;
+  color: white;
 }
 
 .card-trip > img {
   height: 400px;
   width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
 }
