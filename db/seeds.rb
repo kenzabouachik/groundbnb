@@ -6,10 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+Booking.destroy_all
 Flat.destroy_all
 User.destroy_all
 
 User.create!({ email: "Kenza@gmail.com" , password: "12343335" , first_name: "Kenza" , last_name: "Bouachik" , birth_date: "21/03/2000" })
+User.create!({ email: "guilhem@gmail.com" , password: "123456a" , first_name: "Gui" , last_name: "Hidalgo" , birth_date: "02/12/1996" })
 
 Flat.create!([{
     name: 'The Creepy HouseA',
