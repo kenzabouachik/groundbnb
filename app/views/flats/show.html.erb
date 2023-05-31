@@ -1,22 +1,26 @@
 <div class="container">
+  <div class="row">
+    <h1>Votre maison hantée</h1>
 
-  <h1>Votre maison d'horreur</h1>
-
-  <div class="card-trip">
-    <img src=" <%= @flat.image_url %> " />
-    <div class="card-trip-infos">
-      <div>
-        <h2> <%= @flat.name %> </h2>
-        <p>Address: <%= @flat.address %> </p>
-        <p> <%= @flat.description %> </p>
-        <p> <%= @flat.max_people %> max people </p>
+    <div class="card-trip col-8">
+      <img src=" <%= @flat.image_url %> " />
+      <div class="card-trip-infos">
+        <div>
+          <h2> <%= @flat.name %> </h2>
+          <p>Address: <%= @flat.address %> </p>
+          <p>--------------- </p>
+          <p> <%= @flat.description %> </p>
+          <p>--------------- </p>
+          <p> <%= @flat.max_people %> max people </p>
+        </div>
+        <h2 class="card-trip-pricing"> <%= @flat.price.to_i %>€ </h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
-      <h2 class="card-trip-pricing"> <%= @flat.price %> € </h2>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
-  </div>
 
-  <div>
-    <%= render 'form', flat: @flat, booking: @booking %>
+    <div class="form-container col-4">
+      <p>Rentrez vos disponibilités</p>
+      <%= render 'form', flat: @flat, booking: @booking %>
+    </div>
   </div>
 </div>
