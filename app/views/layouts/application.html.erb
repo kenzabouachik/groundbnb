@@ -12,16 +12,12 @@
 
   <body>
 
-    <div>
-      <%= render 'shared/navbar' %>
-    </div>
-    <div class="container">
-      <%= render "shared/flashes" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <div class="content">
-        <%= yield %>
-      </div>
+
+    <%= render 'shared/navbar' %>
+    <%= render "shared/flashes" %>
+    <p class="alert"><%= alert %></p>
+    <div class="app-content">
+      <%= yield %>
     </div>
     <%= render "shared/footer" %>
   </body>
