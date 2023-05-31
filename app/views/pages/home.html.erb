@@ -1,7 +1,11 @@
-<div class="container">
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<button class="btn-ghost">
-<%= link_to "To the houses", flats_path %>
-</button>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/di7aefgt3/image/upload/v1685526076/banner2_olpxtq.jpg);">
+  <div class="container">
+    <h1>Groundbnb for <strong>your craziest</strong> living <strong>experiences</strong>!</h1>
+    <%# <p>Change your life and learn to code at one of our campuses around the world.</p> %>
+  <div class="search-bar">
+    <input type="text" placeholder="put your address...">
+    <button class="btn-ghost"><%= link_to "To the houses", flats_path %></button>
+  </div>
+  </div>
+
 </div>

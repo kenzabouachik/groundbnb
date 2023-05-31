@@ -1,0 +1,37 @@
+/* Styles pour le formulaire de réservation */
+.reservation-form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.reservation-form .form-group {
+  margin-bottom: 20px;
+}
+
+.reservation-form label {
+  display: block;
+  font-weight: bold;
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="number"],
+.reservation-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.reservation-form input[type="submit"] {
+  background-color: #008489;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reservation-form input[type="submit"]:hover {
+  background-color: #006d73;
+}
+

@@ -12,6 +12,7 @@ User.destroy_all
 
 User.create!({ email: "Kenza@gmail.com" , password: "1234356" , first_name: "Kenza" , last_name: "Bouachik" , birth_date: "21/03/2000" })
 
+
 Flat.create!([{
     name: 'The Upside Manor',
     image_url: "https://res.cloudinary.com/di7aefgt3/image/upload/v1685533859/_1327c1c3-d799-4170-9b85-ab1c97b6ae31_rqwezo.jpg",

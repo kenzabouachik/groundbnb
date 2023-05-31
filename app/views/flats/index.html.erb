@@ -1,28 +1,30 @@
-<div class="margin-top-index">
+<div class="container">
+  <div class="margin-top-index">
 
-  <h1>Your flats</h1>
-  <p>Find your creepy home</p>
+    <h1><strong>Your flats</strong></h1>
+    <p>Find your creepy home</p>
 
-  <div class="cards">
-    <% @flats.each do |flat| %>
-    <div class="card-category">
-      <div >
-        <img class="card-img-top" src="<%=flat.image_url%>" alt="">
-      </div>
-      <div class="d-flex justify-content-between end">
-        <div class="p-3 mb-0">
-          <h6 class="title mb-3"><%= link_to flat.name, flat_path(flat) %></h6>
-          <p class="card-address"><%= flat.address%></p>
+    <div class="cards">
+      <% @flats.each do |flat| %>
+      <div class="card-category">
+        <div >
+          <img class="card-img-top" src="<%=flat.image_url%>" alt="">
         </div>
-        <div>
-          <div class="d-flex justify-content-center">
-            <p><%= flat.max_people %></p>
-            <i class="fa-solid fa-user mt-1"></i>
+        <div class="d-flex justify-content-between end">
+          <div class="p-3 mb-0">
+            <h6 class="title mb-3"><%= link_to flat.name, flat_path(flat) %></h6>
+            <p class="card-address"><%= flat.address%></p>
           </div>
-          <p class="mb-0"><%= flat.price %>€</p>
+          <div>
+            <div class="d-flex justify-content-center">
+              <p><%= flat.max_people %></p>
+              <i class="fa-solid fa-user mt-1"></i>
+            </div>
+            <p class="mb-0"><%= flat.price %>€</p>
+          </div>
         </div>
       </div>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>

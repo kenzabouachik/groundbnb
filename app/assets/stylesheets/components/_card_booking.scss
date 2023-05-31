@@ -1,0 +1,63 @@
+.card-trip-booking {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 700px;
+  margin: auto;
+  color: black;
+}
+
+.title-resa {
+  text-align: center;
+}
+
+.card-trip-booking > img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip-booking h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip-booking p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip-booking .card-trip-infos-booking {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos-booking .card-trip-user-booking {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#maDiv {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out forwards;
+  animation-delay: 0s; /* Délai de 0.5 seconde avant le début de l'animation */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
