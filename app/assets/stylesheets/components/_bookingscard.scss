@@ -1,7 +1,6 @@
 .booking-product {
   overflow: hidden;
-  height: 120px;
-  background: white;
+  height: 200px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
@@ -9,22 +8,30 @@
   color: black;
   width: 60%;
   margin: 10px auto 10px;
+  box-shadow: 0 0 15px rgba(196, 12, 12, 0.69);
+  border-radius: 5px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 .booking-product img {
   height: 100%;
-  width: 120px;
-  object-fit: cover;
+  width: 40%;
+  // object-fit: cover;
+  background-position: center;
 }
 
 .booking-product h2 {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .booking-product p {
-  font-size: 12px;
+  font-size: 18px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
