@@ -3,7 +3,7 @@
     <h1>Votre maison hantée</h1>
 
     <div class="card-trip col-8">
-<%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+      <%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
       <div class="card-trip-infos">
         <div>
           <h2> <%= @flat.name %> </h2>
@@ -21,11 +21,11 @@
     <div class="form-container col-4">
       <p>Rentrez vos disponibilités</p>
       <%= render 'form', flat: @flat, booking: @booking %>
+      <div class="map"
+        data-controller="map"
+        data-map-marker-value="<%= @marker.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-  </div>
-  <div style="width: 100%; height: 600px;"
-    data-controller="map"
-    data-map-marker-value="<%= @marker.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
