@@ -6,7 +6,8 @@
 
 <% @bookings.each do |booking| %>
 <%=link_to booking_path(booking) do %>
-  <div class="booking-product">
+  <div class="booking-product play-sound-click">
+   <%# <audio id="sound" src="./sound.mp3"></audio> %>
     <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
     <div class="booking-product-infos">
       <h2><%= booking.flat.name %></h2>
