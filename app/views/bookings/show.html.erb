@@ -5,7 +5,7 @@
 
 
     <div class="card-trip-booking" >
-      <img src=" <%= @booking.flat.image_url %> " />
+      <%= cl_image_tag @booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
       <div class="card-trip-infos-booking">
       <div class="ghost">
       </div>
@@ -26,5 +26,3 @@
       </div>
     </div>
 </div>
-
-
