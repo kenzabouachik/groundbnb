@@ -7,7 +7,7 @@
 <% @bookings.each do |booking| %>
 <%=link_to booking_path(booking) do %>
   <div class="booking-product">
-    <img src="<%=booking.flat.image_url%>" alt="">
+    <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
     <div class="booking-product-infos">
       <h2><%= booking.flat.name %></h2>
       <p>

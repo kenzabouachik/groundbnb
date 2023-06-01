@@ -1,4 +1,11 @@
-<div class="container">
-  <h1>Flats#new</h1>
-  <p>Find me in app/views/flats/new.html.erb</p>
-</div>
+<h1>Créer votre maison</h1>
+
+<%= simple_form_for(@flat) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.input :max_people %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
