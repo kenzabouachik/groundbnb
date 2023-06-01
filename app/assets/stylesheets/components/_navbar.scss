@@ -41,17 +41,24 @@
   margin-top: 100px;
 }
 
-.btn-create-flat {
-  width: 100%;
-  padding: 4px;
-  background-color: red;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 10px;
+
+.btn-create-flat{
+  color: white;
+  border-radius: 50px;
+  background: #040404;
+  transition: background 0.9 s ease;
+  box-shadow: none;
+}
+
+.btn-create-flat a {
+  text-decoration: none;
+}
+
+.btn-create-flat:hover {
+  background: #090909;
+  box-shadow: 0 0 8px red;
+}
+
+.btn-create-flat:hover a {
+  color: red;
 }
