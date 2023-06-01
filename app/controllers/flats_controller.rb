@@ -6,6 +6,15 @@ class FlatsController < ApplicationController
   def show
     @flat = Flat.find(params[:id])
     @booking = Booking.new
+    if @flat.geocoded?
+      @marker = [
+        {
+          lat: @flat.latitude,
+          lng: @flat.longitude,
+          marker_html: render_to_string(partial: "marker")
+        }
+      ]
+    end
   end
 
   def new
