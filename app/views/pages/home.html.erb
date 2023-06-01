@@ -2,10 +2,12 @@
   <div class="container">
     <h1>Groundbnb for <strong>your craziest</strong> living <strong>experiences</strong>!</h1>
     <%# <p>Change your life and learn to code at one of our campuses around the world.</p> %>
-  <div class="search-bar">
-    <input type="text" placeholder="put your address...">
-    <button class="btn-ghost"><%= link_to "To the houses", flats_path %></button>
-  </div>
-  </div>
-
+    <%= form_with url: flats_path, method: :get, class: "d-flex search-bar" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control me-3 ms-2",
+        placeholder: "Find your creepy place"
+      %>
+      <%= submit_tag "Boo!", class: "btn-ghost" %>
+    <% end %>
 </div>
