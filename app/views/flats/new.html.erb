@@ -1,6 +1,6 @@
 <h1>Créer votre maison</h1>
 
-<%= simple_form_for(@flat) do |f| %>
+<%= simple_form_for(@flat, html: { class: "flat-form" }) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :description %>
