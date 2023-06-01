@@ -21,6 +21,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+ 
   end
 
   private
