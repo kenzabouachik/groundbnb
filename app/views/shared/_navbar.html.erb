@@ -1,5 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
+    <%= link_to root_path do %>
+    <%= image_tag("https://fontmeme.com/permalink/230530/170bf3ae46730e6e8ec16769d77bf82e.png", style: "width: 200px; height: auto;")  %>
+    <% end %>
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "" %>
     <% end %>
@@ -8,9 +11,6 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <%# <%= link_to image_tag("https://fontmeme.com/permalink/230530/170bf3ae46730e6e8ec16769d77bf82e.png"), root_path %>
-    <%= link_to root_path do %>
-    <%= image_tag("https://fontmeme.com/permalink/230530/170bf3ae46730e6e8ec16769d77bf82e.png", style: "width: 200px; height: auto;")  %>
-    <% end %>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
@@ -20,8 +20,8 @@
           <li class="nav-itemn mt-2 me-2">
             <%= link_to "Bookings", dashboards_path, class: "nav-link" %>
           </li>
-          <li class="nav-item btn-create-flat">
-            <%= link_to "Create your flat", new_flat_path, class: "nav-link" %>
+          <li class="nav-item mt-2 me-2">
+            <button class="btn-create-flat"><%= link_to "Create your flat", new_flat_path, class: "nav-link" %></button>
           </li>
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
