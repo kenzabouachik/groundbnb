@@ -3,7 +3,7 @@
     <h1>Votre maison hantée</h1>
 
     <div class="card-trip col-8">
-      <img src=" <%= @flat.image_url %> " />
+<%= cl_image_tag @flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
       <div class="card-trip-infos">
         <div>
           <h2> <%= @flat.name %> </h2>
