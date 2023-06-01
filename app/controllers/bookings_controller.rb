@@ -20,14 +20,19 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @flat = Flat.find(params[:flat_id])
+    @booking.status = "accepted"
+
+  end
+
   def destroy
- 
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :flat_id)
+    params.require(:booking).permit(:start_date, :end_date, :flat_id, :status)
   end
 
 end

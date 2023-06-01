@@ -50,6 +50,9 @@ class FlatsController < ApplicationController
   end
 
   def destroy
+    @flat = Flat.find(params[:id])
+    @flat.destroy
+    redirect_to myhouses_path, status: :see_other
   end
 
   private
