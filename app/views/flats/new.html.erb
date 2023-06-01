@@ -1,11 +1,15 @@
-<h1>Créer votre maison</h1>
+<div class="container">
 
-<%= simple_form_for(@flat, html: { class: "flat-form" }) do |f| %>
+<h1 style="text-align:center; margin-bottom:20px">Create your own Creepy House</h1>
+
+
+<%= simple_form_for(@flat, html: { class: "flat-form form-shadow" }) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :description %>
   <%= f.input :price %>
   <%= f.input :max_people %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit %>
+  <%= f.submit%>
 <% end %>
+</div>

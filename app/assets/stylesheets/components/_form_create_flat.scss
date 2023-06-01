@@ -15,20 +15,28 @@
 }
 
 .flat-form input[type="submit"] {
-  background-color: #4CAF50;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: #040404;
+  transition: background 0.9 s ease;
+  box-shadow: none
 }
 
 .flat-form input[type="submit"]:hover {
-  background-color: #45a049;
+  background: #090909;
+  box-shadow: 0 0 8px red;
+  color: red;
 }
 
 .flat-form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.form-shadow{
+  box-shadow: 0 0 30px rgba(196, 12, 12, 0.69);
+  border-radius: 8px;
+
 }
