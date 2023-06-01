@@ -1,19 +1,20 @@
 
 <div class="container">
-  <div class="margin-top-index">
+  <div class="row">
 
-    <h1><strong>Your flats</strong></h1>
 
-    <div class="cards">
+
+    <div class="cards-house col-5">
+    <h1><strong>Vos maisons</strong></h1>
       <% @flats.each do |flat| %>
-      <div class="card-category">
+      <div class="card-category-house">
         <div >
           <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
         </div>
         <div class="d-flex justify-content-between end">
           <div class="p-3 mb-0">
             <h6 class="title mb-3"><%= link_to flat.name, flat_path(flat) %></h6>
-            <p class="card-address"><%= flat.address%></p>
+            <p class="card-address-house"><%= flat.address%></p>
           </div>
           <div>
             <div class="d-flex justify-content-center">
@@ -26,24 +27,25 @@
       </div>
       <% end %>
     </div>
-  </div>
-</div>
-<div class="container">
 
-<% @bookings.each do |booking| %>
-<%=link_to booking_path(booking) do %>
-  <div class="booking-product play-sound-click">
-   <%# <audio id="sound" src="./sound.mp3"></audio> %>
-    <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
-    <div class="booking-product-infos">
-      <h2><%= booking.flat.name %></h2>
-      <p>
-      <strong>Arrival:</strong> <%= booking.start_date%> <br>
-      <strong>Departure:</strong> <%= booking.end_date%> <br>
-      <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i%> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i  %>€
-      </p>
+
+    <div class="col-7">
+    <h1><strong>Vos demandes de réservations</strong></h1>
+      <% @bookings.each do |booking| %>
+      <%=link_to booking_path(booking) do %>
+        <div class="booking-product-house">
+          <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
+          <div class="booking-product-infos-house">
+            <h2><%= booking.flat.name %></h2>
+            <p>
+            <strong>Arrival:</strong> <%= booking.start_date%> <br>
+            <strong>Departure:</strong> <%= booking.end_date%> <br>
+            <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i%> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i  %>€
+            </p>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
-  <% end %>
-<% end %>
 </div>
