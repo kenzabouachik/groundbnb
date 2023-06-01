@@ -8,6 +8,8 @@
       <%= cl_image_tag @booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
       <div class="card-trip-infos-booking">
       <div class="ghost">
+       <img id="centered-image" src="https://res.cloudinary.com/diuabdrmm/image/upload/v1685617090/png-transparent-valak-insidious-ghost-nun-demon-horror-gruesome-mask-teeth-mouth-thumbnail-removebg-preview_gosxtb.png" alt="Image">
+
       </div>
         <div>
           <h2> <%= @booking.flat.name %> </h2>
@@ -26,3 +28,4 @@
       </div>
     </div>
 </div>
+<script src="script.js"></script>
