@@ -1,0 +1,139 @@
+.card-category-house {
+  box-shadow: 0 0 15px rgba(196, 12, 12, 0.69);
+  background-size: cover;
+
+  // background-position: center;
+  // height: 180px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // color: white;
+  // font-size: 24px;
+  // font-weight: bold;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-address-house {
+  font-size: 12px;
+}
+
+.title a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.cards-house {
+  grid-gap: 16px;
+}
+
+.cards-house p {
+  font-size: 18px;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.booking-product-house {
+  overflow: hidden;
+  height: 200px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  // align-items: center;
+  margin : 8px;
+  color: black;
+  width: 100%;
+  margin: 5px 10px;
+  box-shadow: 0 0 15px rgba(196, 12, 12, 0.69);
+  border-radius: 5px;
+  color: white;
+  padding-right: 10px;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: rgb(239, 11, 11);
+}
+
+.booking-product-house img {
+  height: 100%;
+  width: 40%;
+  margin-right: 20px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.booking-product-house h2 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  color: white;
+}
+
+.booking-product-house p {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.croix-house {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  font-size: 24px;
+}
+
+.booking-product-infos-house {
+  display: flex;
+  padding: 16px;
+  padding: 0px;
+}
+
+h3{
+  text-align: center;
+  color: red;
+}

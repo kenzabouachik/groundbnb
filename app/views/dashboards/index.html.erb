@@ -19,7 +19,15 @@
               <p>
               <strong>Arrival:</strong> <%= booking.start_date%> <br>
               <strong>Departure:</strong> <%= booking.end_date%> <br>
-              <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i%> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i  %>€
+              <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i%> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i  %>€ <br><br>
+              <strong>Reservation status:</strong>
+              <% if booking.status == "accepted" %>
+                <span style="color: green;"><%= booking.status %></span>
+              <% elsif booking.status == "refused"  %>
+                <span style="color: red;"><%= booking.status %></span>
+              <% else %>
+                <span style="color: yellow;"><%= booking.status %></span>
+              <% end %>
               </p>
             </div>
           </div>
