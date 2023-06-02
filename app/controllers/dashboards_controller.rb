@@ -9,5 +9,4 @@ class DashboardsController < ApplicationController
     @booking.destroy
     redirect_to dashboards_path
   end
-
 end
