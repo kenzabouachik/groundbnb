@@ -1,13 +1,13 @@
 
-<div id="maDiv" class="fade-in fireworks">
-<%= javascript_include_tag 'custom' %>
+<%# <div id="maDiv" class="fade-in fireworks"> %>
+<%# <%= javascript_include_tag 'custom' %>
 <%= javascript_include_tag 'ghost' %>
-<%= javascript_include_tag 'scrollSound' %>
+<%# <%= javascript_include_tag 'scrollSound' %>
 
   <h1 class="title-resa">Your reservation</h1>
 
 
-    <div class="card-trip-booking" >
+    <div class="card-trip-booking" data-controller='ghost' data-action="mouseover->ghost#playSound">
       <%= cl_image_tag @booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
       <div class="card-trip-infos-booking">
       <div class="ghost">
@@ -16,7 +16,8 @@
       </div>
         <div>
           <h2> <%= @booking.flat.name %> </h2>
-          <%# <button id="playSoundButton">Jouer le son</button> %>
+          <%# <button id="your-button-id" data-action='click->ghost#playSound'>Jouer le son</button> %>
+          <%= audio_tag "sound.wav", data: {ghost_target: "soundOof"} %>.
           <p>Address: <%= @booking.flat.address %> </p>
           <p>--------------- </p>
           <p> <%= @booking.flat.description %> </p>
@@ -39,4 +40,4 @@
     </div>
 </div>
 
-<script src="/assets/custom.js"></script>
+<%# <script src="/assets/scrollSound.js"></script> %>

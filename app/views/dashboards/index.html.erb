@@ -4,7 +4,7 @@
 </div>
 
 
-<div>
+<div data-controller='ghost'>
   <% if @bookings.empty? %>
   <h3>You don't have any bookings !!!</h3>
   <% else %>
@@ -12,7 +12,8 @@
       <div class= "booking-product">
 
           <%=link_to booking_path(booking) do %>
-          <div class="booking-product-infos">
+          <div class="booking-product-infos" data-action="click->ghost#playSound">
+           <%= audio_tag "sound.wav", data: {ghost_target: "soundOof"} %>
             <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
             <div>
               <h2><%= booking.flat.name %></h2>
