@@ -5,7 +5,7 @@
 
 
     <div class="cards-house col-5 mt-5">
-    <h1><strong>Your houses</strong></h1>
+    <h1 class="mb-4"><strong>Your houses</strong></h1>
       <% @flats.each do |flat| %>
       <div class="card-category-house mb-3">
         <div >
@@ -31,7 +31,7 @@
 
 
  <div class="col-7 mt-5">
-  <h1><strong>Your booking requests</strong></h1>
+  <h1 class="mb-4"><strong>Your booking requests</strong></h1>
   <% @bookings.each do |booking| %>
     <%= link_to booking_path(booking) do %>
       <div class="booking-product-house mb-2">
