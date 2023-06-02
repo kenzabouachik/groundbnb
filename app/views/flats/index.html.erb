@@ -1,8 +1,8 @@
 <div class="container">
   <div class="margin-top-index">
 
-    <h1><strong>Your flats</strong></h1>
-    <p>Find your creepy home</p>
+    <h1><strong>Welcome to your worst nightmare</strong></h1>
+    <h4>Step into darkness...</p>
 
     <div class="cards">
       <% @flats.each do |flat| %>
@@ -16,11 +16,11 @@
             <p class="card-address"><%= flat.address%></p>
           </div>
           <div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-3">
               <p><%= flat.max_people %></p>
-              <i class="fa-solid fa-user mt-1"></i>
+              <i class="fa-solid fa-user ms-1"></i>
             </div>
-            <p class="mb-0"><%= flat.price %>€</p>
+            <p class="mb-0 mt-3"><%= flat.price.to_i %>€</p>
           </div>
         </div>
       </div>

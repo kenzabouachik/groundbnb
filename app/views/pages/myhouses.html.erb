@@ -4,13 +4,12 @@
 
 
 
-    <div class="cards-house col-5">
-    <h1><strong>Vos maisons</strong></h1>
+    <div class="cards-house col-5 mt-5">
+    <h1><strong>Your houses</strong></h1>
       <% @flats.each do |flat| %>
       <div class="card-category-house">
         <div >
           <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
-          <%= link_to "X", flat_path(flat), data: { turbo_method: :delete } %>
         </div>
         <div class="d-flex justify-content-between end">
           <div class="p-3 mb-0">
@@ -18,11 +17,12 @@
             <p class="card-address-house"><%= flat.address%></p>
           </div>
           <div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center mt-1">
               <p><%= flat.max_people %></p>
-              <i class="fa-solid fa-user mt-1"></i>
+              <i class="fa-solid fa-user mt-1 ms-1"></i>
             </div>
-            <p class="mb-0"><%= flat.price %>€</p>
+            <p class="ms-3"><%= flat.price.to_i %>€</p>
+            <button class="btn-create-flat mt-4"><%= link_to "DELETE", flat_path(flat), data: { turbo_method: :delete } %></button>
           </div>
         </div>
       </div>
@@ -30,30 +30,33 @@
     </div>
 
 
-    <div class="col-7">
-    <h1><strong>Vos demandes de réservations</strong></h1>
-      <% @bookings.each do |booking| %>
-      <%=link_to booking_path(booking) do %>
-        <div class="booking-product-house">
-          <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
-          <div class="booking-product-infos-house">
-            <h2><%= booking.flat.name %></h2>
-            <p>
-            <strong>Arrival:</strong> <%= booking.start_date%> <br>
-            <strong>Departure:</strong> <%= booking.end_date%> <br>
-            <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i%> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i  %>€
-            <p>Status: <%= booking.status %></p>
-             <% if booking.status != "accepted" %>
-              <%= link_to "Accept", accept_booking_path(booking), data: { turbo_method: :patch } %>
-             <% end %>
-             <% if booking.status != "refused" %>
-              <%= link_to "Refuse", refuse_booking_path(booking), data: { turbo_method: :patch } %>
-             <% end %>            
-            </p>
+ <div class="col-7 mt-5">
+  <h1><strong>Your booking requests</strong></h1>
+  <% @bookings.each do |booking| %>
+    <%= link_to booking_path(booking) do %>
+      <div class="booking-product-house">
+        <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "image-fluid" %>
+        <div class="booking-product-infos-house">
+          <h2><%= booking.flat.name %></h2>
+          <p>
+            <strong>Arrival:</strong> <%= booking.start_date %> <br>
+            <strong>Departure:</strong> <%= booking.end_date %> <br>
+            <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i %> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i %>€
+          </p>
+          <p>Status: <%= booking.status %></p>
+          <div>
+            <% if booking.status != "accepted" %>
+              <button class="btn-create-flat mt-5 ms-5"><%= link_to "Accept", accept_booking_path(booking), data: { turbo_method: :patch } %></button>
+            <% end %>
+            <% if booking.status != "refused" %>
+              <button class="btn-create-flat mt-5"><%= link_to "Refuse", refuse_booking_path(booking), data: { turbo_method: :patch } %></button>
+            <% end %>
           </div>
         </div>
-        <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
   </div>
 </div>
