@@ -104,16 +104,16 @@ User.destroy_all
                     #   }
                     # ])
 
-                    house1 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610616/photo-1627729781055-12d4a63a8ddc_o1safo.avif")
-                    house2 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610616/photo-1617546127542-eb0dd8bdd52f_o7de2j.avif")
-                    house3 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/photo-1637150784649-23b893a31dd7_au0xva.avif")
-                    house4 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/photo-1610301586806-06e1c00cac1a_yec7sh.avif")
-                    house5 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/photo-1440549770084-4b381ce9d988_morahv.avif")
-                    house6 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/_0ac55def-2dce-4db0-9e54-678e0a34adfd_c4g3hz_rucbx8.jpg")
-                    house7 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/_1327c1c3-d799-4170-9b85-ab1c97b6ae31_rqwezo_cj3y36.jpg")
-                    house8 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/_4db3c866-8d30-4746-bb82-b64bd693d4c0_qx0ufc_pcg8pg.jpg")
-                    house9 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/photo-1481018085669-2bc6e4f00eed_aajbui.avif")
-                    house10 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/banner2_olpxtq_tjvs0t.jpg")
+                    house1 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685610615/_1327c1c3-d799-4170-9b85-ab1c97b6ae31_rqwezo_cj3y36.jpg")
+                    house2 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711463/_6c1e4a73-aeb9-44f6-aa72-d864c3c7b53d_vo2bpj.jpg")
+                    house3 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711463/_5d898c05-3a3d-4744-a4a2-aab3a133a0fa_kfgelb.jpg")
+                    house4 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711463/_71e52340-1d72-4f4e-bc4b-fd8167ffdd7e_cq18sv.jpg")
+                    house5 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711463/_63e2f922-fd45-4e1b-84a0-7fa375d23876_m3uvxz.jpg")
+                    house6 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711464/_b8805460-639b-4c42-b7dd-25619accfdb0_k5utto.jpg")
+                    house7 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711464/_f9b35efb-6a6f-44e6-813f-d9463c5c2822_tygicg.jpg")
+                    house8 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711464/_116ce6c4-4e39-4e05-afd2-e950385abd97_arjrpp.jpg")
+                    house9 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711464/_5220cefb-ff3d-4c5f-85a3-cd346ca57151_ukgwb2.jpg")
+                    house10 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685711464/_c877f664-6911-48ed-b28f-364e15c7dc6b_rxtcw2.jpg")
 
                     avatar1 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685698900/stranger-things-season-4-upside-1_tnrosg.webp")
                     avatar2 = URI.open("https://res.cloudinary.com/diuabdrmm/image/upload/v1685698919/2nfuf6u63rclboxnb3wss5mvw4_62d969f27ee0e_0_fzlgbu.jpg")
@@ -151,7 +151,7 @@ flat1 = Flat.new({
     description: 'Welcome to the House of Shadows, a haunting Victorian mansion nestled in the heart of an ancient forest. Step inside and immerse yourself in its eerie atmosphere, where chilling secrets and supernatural encounters await. Brace yourself for a night of spine-tingling terror and discover the true meaning of fear within these haunted walls.',
     price: 150,
     max_people: 2,
-    user_id: User.last.id
+    user_id: User.first.id
   })
 flat1.photo.attach(io: house1, filename:"The Upside Manor")
 flat1.save!
@@ -162,7 +162,7 @@ flat2 = Flat.new({
     description: 'Discover the Whispering Waves Router Van, nestled beside the mysterious Shadow Lake. Experience the perfect blend of technology and natural beauty as you connect to the digital world amidst the enchanting ambiance of the lake. Surrender to the allure of the vans vintage charm and immerse yourself in the secrets that the whispers of the lake hold',
     price: 250,
     max_people: 2,
-    user_id: User.last.id
+    user_id: User.first.id
   })
 flat2.photo.attach(io: house2, filename:"The Demogorgon's Lair")
 flat2.save!
@@ -173,7 +173,7 @@ flat3 = Flat.new({
     description: 'Discover the Whispering Waves Router Van, nestled beside the mysterious Shadow Lake. Experience the perfect blend of technology and natural beauty as you connect to the digital world amidst the enchanting ambiance of the lake. Surrender to the allure of the vans vintage charm and immerse yourself in the secrets that the whispers of the lake hold',
     price: 350,
     max_people: 8,
-    user_id: User.last.id
+    user_id: User.first.id
   })
 flat3.photo.attach(io: house3, filename:"Dustin's Den")
 flat3.save!
@@ -223,8 +223,8 @@ flat7.photo.attach(io: house7, filename:"Stylish Sanctuary")
 flat7.save!
 
 flat8 = Flat.new({
-    name: 'The Sinister House of Hawkins',
-    address: '179 Hawk Dr, Hawkins, TX 75765, États-Unis',
+    name: 'The Sinister Boat',
+    address: 'Porte 3C Port de Marseille Fos, 13015 Marseille',
     description: 'Discover the Whispering Waves Router Van, nestled beside the mysterious Shadow Lake. Experience the perfect blend of technology and natural beauty as you connect to the digital world amidst the enchanting ambiance of the lake. Surrender to the allure of the vans vintage charm and immerse yourself in the secrets that the whispers of the lake hold',
     price: 150,
     max_people: 4,
@@ -235,7 +235,7 @@ flat8.save!
 
 flat9 = Flat.new({
     name: "The Demogorgon's Twilight Abode",
-    address: '1912 US-80, Hawkins, TX 75765, États-Unis',
+    address: '9 Rue de Luynes, 75007 Paris',
     description: 'Discover the Whispering Waves Router Van, nestled beside the mysterious Shadow Lake. Experience the perfect blend of technology and natural beauty as you connect to the digital world amidst the enchanting ambiance of the lake. Surrender to the allure of the vans vintage charm and immerse yourself in the secrets that the whispers of the lake hold',
     price: 650,
     max_people: 6,
