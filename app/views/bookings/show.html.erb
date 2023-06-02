@@ -35,7 +35,7 @@
               <% end %>
         </div>
         <h2 class="card-trip-pricing-booking"> <%= @booking.flat.price.to_i %>€ </h2>
-        <%= cl_image_tag current_user.photo.key, class:"avatar",style: "position: relative; top: -100px;"  %>
+        <%= cl_image_tag @booking.flat.user.photo.key, class:"avatar",style: "position: relative; top: -100px;"  %>
       </div>
     </div>
 </div>
