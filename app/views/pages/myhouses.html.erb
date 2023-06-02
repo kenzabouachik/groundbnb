@@ -7,7 +7,7 @@
     <div class="cards-house col-5 mt-5">
     <h1><strong>Your houses</strong></h1>
       <% @flats.each do |flat| %>
-      <div class="card-category-house">
+      <div class="card-category-house mb-3">
         <div >
           <%= cl_image_tag flat.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
         </div>
@@ -34,7 +34,7 @@
   <h1><strong>Your booking requests</strong></h1>
   <% @bookings.each do |booking| %>
     <%= link_to booking_path(booking) do %>
-      <div class="booking-product-house">
+      <div class="booking-product-house mb-2">
         <%= cl_image_tag booking.flat.photo.key, height: 300, width: 400, crop: :fill, class: "image-fluid" %>
         <div class="booking-product-infos-house">
           <h2><%= booking.flat.name %></h2>
@@ -43,7 +43,14 @@
             <strong>Departure:</strong> <%= booking.end_date %> <br>
             <strong>Total Price:</strong> <%= (booking.end_date - booking.start_date).to_i %> x <%= booking.flat.price.to_i %> € = <%= ((booking.end_date - booking.start_date).to_i * booking.flat.price).to_i %>€
           </p>
-          <p>Status: <%= booking.status %></p>
+          <p><strong>Status: </strong>
+          <% if booking.status == "accepted" %>
+          <span style="color: green;"><%= booking.status %></span>
+          <% elsif booking.status == "refused"  %>
+          <span style="color: red;"><%= booking.status %></span>
+          <% else %>
+          <span style="color: yellow;"><%= booking.status %></span>
+          <% end %></p>
           <div>
             <% if booking.status != "accepted" %>
               <button class="btn-create-flat mt-5 ms-5"><%= link_to "Accept", accept_booking_path(booking), data: { turbo_method: :patch } %></button>
