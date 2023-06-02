@@ -5,6 +5,15 @@
   background: #040404;
   transition: background 0.9 s ease;
   box-shadow: none;
+
+}
+
+.border-white {
+  border: 1px solid white;
+}
+
+.border-white:hover {
+  border: 0px solid white;
 }
 
 .btn-ghost a {

@@ -32,8 +32,9 @@
             </div>
           </div>
           <% end %>
-
-        <%= link_to 'X', dashboard_path(booking), data: {turbo_method: "delete"}, class: "croix" %>
+          <div class="d-flex flex-column justify-content-center">
+            <%= link_to 'CANCEL', dashboard_path(booking), data: {turbo_method: "delete"}, class: "btn-ghost btn-cancel border-white" %>
+          </div>
       </div>
     <% end %>
 
