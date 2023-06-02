@@ -20,10 +20,24 @@ class BookingsController < ApplicationController
     end
   end
 
-  def update
-    @flat = Flat.find(params[:flat_id])
+  def accepted?
+    @booking = Booking.find(params[:id])
     @booking.status = "accepted"
+    if @booking.save
+      redirect_to myhouses_path
+    else
+      redirect_to myhouses_path, status: :unprocessable_entity, alert: 'An error occured'
+    end
+  end
 
+  def refused?
+    @booking = Booking.find(params[:id])
+    @booking.status = "refused"
+    if @booking.save
+      redirect_to myhouses_path
+    else
+      redirect_to myhouses_path, status: :unprocessable_entity, alert: 'An error occured'
+    end
   end
 
   def destroy
@@ -34,5 +48,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :flat_id, :status)
   end
-
 end
