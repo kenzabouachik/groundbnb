@@ -1,9 +1,14 @@
 <%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :start_date, label: "Date de début",
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-    <%= f.input :end_date, label: "Date de fin",
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
-  <%= f.submit %>
+  <div data-controller="datepicker" data-datepicker-price-value="<%= @flat.price.to_i %>">
+    <%= f.input :start_date, label: "Check in",
+              as: :string,
+              input_html: { data: {datepicker_target: "start", action: "change->datepicker#calculatePrice"} } %>
+      <%= f.input :end_date, label: "Check out",
+              as: :string,
+              input_html: { data: {datepicker_target: "end", action: "change->datepicker#calculatePrice"} } %>
+    <div>
+      <p data-datepicker-target="price"><p>
+    </div>
+    <%= f.submit %>
+  </div>
 <% end %>
