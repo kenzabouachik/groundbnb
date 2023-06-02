@@ -1,5 +1,11 @@
+// function playSound() {
+//   var audio = new Audio('sound.mp3');
+//   audio.play();
+// }
+
 window.addEventListener('scroll', function() {
   var image = document.getElementById('centered-image');
+  // playSound();
 
   setTimeout(function() {
     image.classList.add('enlarged'); // Ajoute la classe pour agrandir l'image
@@ -18,10 +24,13 @@ window.addEventListener('scroll', function() {
   }, 6000); // Délai avant de masquer complètement l'image (6 secondes dans cet exemple)
 });
 
-console.log()
 
-const divToClick = document.querySelectorAll('.play-sound-click')
 
-const sound = new Audio("./sound.mp3")
-const playSound = () => {console.log(divToClick);}
-divToClick.addEventListener('click', playSound(sound))
+
+// console.log()
+
+// const divToClick = document.querySelectorAll('.play-sound-click')
+
+// const sound = new Audio("./sound.mp3")
+// const playSound = () => {console.log(divToClick);}
+// divToClick.addEventListener('click', playSound(sound))
