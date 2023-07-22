@@ -8,6 +8,7 @@ class Flat < ApplicationRecord
   validates :address, uniqueness: true
   belongs_to :user
   has_many :bookings, dependent: :destroy
+  has_many :commentts, dependent: :destroy
 
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
