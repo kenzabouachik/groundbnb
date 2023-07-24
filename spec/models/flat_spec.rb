@@ -21,7 +21,7 @@ RSpec.describe Flat, type: :model do
              max_people: 2,
              user_id: user.id)
 
-      flat.commentts << Commentt.new(content:'spec')
+      flat.commentts << Commentt.new(content:'specijfjifjifjiffjoffoffjfo')
 
       flat.save!
 

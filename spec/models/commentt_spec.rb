@@ -2,9 +2,12 @@ require 'rails_helper'
 
 RSpec.describe Commentt, type: :model do
 
-  # it 'commentaire doit persister' do
+  context 'validation' do
+    it 'doit valider la longueur du text' do
 
-  #   Commentt.create!(content: "trop cool", flat_id: 53)
-  #   expect(Commentt.count).to eq(1)
-  # end
+      comment = Commentt.new(content: 'aze')
+
+      expect(comment.valid?).to be false
+    end
+  end
 end

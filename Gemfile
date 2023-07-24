@@ -65,6 +65,8 @@ group :development, :test do
   gem "dotenv-rails"
   gem 'rspec-rails', '~> 6.0'
   gem 'guard-rspec', require: false
+  gem 'factory_bot_rails'
+  gem 'factory_girl_rails'
 end
 
 group :development do
